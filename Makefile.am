@@ -1,11 +1,6 @@
-# Template Variables: bqn-primer 
-################################################################################
-
 ################################################################################
 
 # Set Up Other Variables
-
-
 
 ## Enable local m4 cache
 ACLOCAL_AMFLAGS = -I m4
@@ -27,7 +22,7 @@ EXTRA_DIST =  Changelog.md \
               Changelog.md \
               ChangeLog \
               COPYING \
-              m4/ \
+              m4/tar-edited.m4 \
               guix.scm \
               doc/bqn-primer.texi \
               doc/version.texi.in \
@@ -35,6 +30,7 @@ EXTRA_DIST =  Changelog.md \
               doc/procedure-types.texi
 
 ################################################################################
+
 # Define Outputs
 
 all: gen-text gen-html gen-docb gen-lpdf
@@ -52,12 +48,9 @@ gen-lpdf:
 	texi2pdf -c $(infofiles)
 
 
-# HTML (with --html),
-# plain text (with --plaintext),
-# DocBook (with --docbook),
-# Texinfo XML (with --xml).
-
 ## Symlinks Can Go Here, along with other end-of-install changes
 # install-data-hook:
 # 	$(LN_S) $(DESTDIR)$(bindir)/realfile $(DESTDIR)$(bindir)/link
 # 	chmod +x $(DESTDIR)$(javadir)/bqn-primer.jar
+
+################################################################################
